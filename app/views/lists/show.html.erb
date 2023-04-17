@@ -1,0 +1,15 @@
+<h1>Lists#show</h1>
+
+<h2>Title</h2>
+<p><%= @list.title %></p>
+
+<h2>Body</h2>
+<p><%= @list.body %></p>
+
+<h2>Image</h2>
+<% if @list.image.attached? %>
+  <p><%= image_tag @list.image, size: "200x200" %></p>
+<% else %>
+  <p><%= image_tag "no_image", size: "200x200" %></p>
+ <% end %>
+<p><%= link_to "Edit", edit_list_path(@list.id) %></p>

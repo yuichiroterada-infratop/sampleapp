@@ -1,0 +1,13 @@
+<h1>Lists#new</h1>
+
+<%= form_with model: @list, url: "/lists", method: :post do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+  <h4>Image</h4>
+  <%= f.file_field :image, accept: "image_*" %>
+  
+  </br><%= f.submit %>
+<% end %>
+
